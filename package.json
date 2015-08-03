@@ -1,0 +1,19 @@
+{
+  "name": "node-dependency-tree",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "node-dependency-tree": "index.js"
+  },
+  "dependencies": {
+    "archy": "^1.0.0",
+    "jsdom": "^5.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
