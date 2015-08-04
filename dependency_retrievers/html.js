@@ -2,7 +2,7 @@ var jsdom = require('jsdom');
 var path = require('path');
 var assert = require('better-assert');
 
-module.exports = function(baseURL, entry_point, callback) {
+module.exports = function(html_path, entry_point, callback) {
 
     assert(/^\//.test(entry_point));
 

@@ -15,8 +15,7 @@ entry_point = path.join(process.cwd(), entry_point);
 
 retrieve_all_from_html(entry_point, callback);
 
-function callback(){
-    var nodes = [];
+function callback(dependencies){
     var dependency_tree = {
         label: entry_point,
         nodes: Object.keys(dependencies)

@@ -2,11 +2,11 @@ var Builder = require('systemjs-builder');
 
 var path = require('path');
 
-module.exports = function(baseURL, main, callback){
+module.exports = function(html_path, main, callback){
 
     var systemBuilder = new Builder();
 
-    systemBuilder.loader.baseURL = baseURL;
+    //systemBuilder.loader.baseURL = html_path;
     //systemBuilder.loadConfigSync('src/config.js');
 
     var main_normalized;
