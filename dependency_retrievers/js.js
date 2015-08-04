@@ -2,11 +2,11 @@ var Builder = require('systemjs-builder');
 
 var path = require('path');
 
-module.exports = function(main, callback){
+module.exports = function(baseURL, main, callback){
 
     var systemBuilder = new Builder();
 
-    //systemBuilder.loader.baseURL += 'src/';
+    systemBuilder.loader.baseURL = baseURL;
     //systemBuilder.loadConfigSync('src/config.js');
 
     var main_normalized;
@@ -38,7 +38,6 @@ module.exports = function(main, callback){
             })
             .then(function(tree){
 
-                console.log(systemBuilder.loader.baseURL);
                 var ret = {};
 
                 var key = keys_normalized[main_normalized];
@@ -48,14 +47,13 @@ module.exports = function(main, callback){
                         path.normalize(systemBuilder.loader.baseURL).replace(/^[^:]*:/,''),
                         main);
                 */
-                console.log(key, Object.keys(tree));
+              //console.log(key, Object.keys(tree));
                 ret[main] = tree[key].deps;
 
-                callback(ret);
+                //callback(ret);
 
-            })
-            .catch(function(err){
-                console.error(new Error(err).stack);
+                callback(tree[key].deps);
+
             })
     );
 }
