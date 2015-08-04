@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "archy": "^1.0.0",
-    "jsdom": "^5.6.1"
+    "jsdom": "^5.6.1",
+    "precinct": "^2.5.1"
   },
   "devDependencies": {},
   "scripts": {

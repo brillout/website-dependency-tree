@@ -7,7 +7,7 @@ var retrievers = {
 };
 
 
-module.exports = function(html_path, path, callback){
+module.exports = function(html_dir, path, callback){
 
     var suffix = path.split('.').pop();
 
@@ -18,11 +18,20 @@ module.exports = function(html_path, path, callback){
     }
 
     if( ! retrievers[suffix] ) {
-        console.log("WARNING; can't retrieve dependencies of "+path+"; *."+suffix+" files not supported");
+        // console.log("WARNING; can't retrieve dependencies of "+path+"; *."+suffix+" files not supported");
         callback(null);
         return;
     }
 
-    retrievers[suffix](html_path, path, callback);
+    try {
+        require('fs').lstatSync(path);
+    }
+    catch (e) {
+        console.log("WARNING; there is a dependency to "+path+" but this doens't point to a file");
+        callback(null);
+        return;
+    }
+
+    retrievers[suffix](html_dir, path, callback);
 
 };

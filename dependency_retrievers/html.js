@@ -2,20 +2,20 @@ var jsdom = require('jsdom');
 var path = require('path');
 var assert = require('better-assert');
 
-module.exports = function(html_path, entry_point, callback) {
+module.exports = function(html_dir, html_path, callback) {
 
-    assert(/^\//.test(entry_point));
+    assert(/^\//.test(html_path));
 
-    jsdom.env(entry_point, function(err, window){
+    jsdom.env(html_path, function(err, window){
 
         /*
         var ret = {};
-        ret[entry_point] =
+        ret[html_path] =
             get_attribute_values('href')
             .concat(
                 get_attribute_values('src'))
             .map(function(url_relative){
-                return path.join(path.dirname(entry_point), url_relative); });
+                return path.join(path.dirname(html_path), url_relative); });
                 */
 
         callback(
@@ -23,7 +23,7 @@ module.exports = function(html_path, entry_point, callback) {
             .concat(
                 get_attribute_values('src'))
             .map(function(url_relative){
-                return path.join(path.dirname(entry_point), url_relative); })
+                return path.join(path.dirname(html_path), url_relative); })
        );
 
         function get_attribute_values(attribute){

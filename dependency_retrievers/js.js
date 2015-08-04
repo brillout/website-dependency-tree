@@ -1,60 +1,13 @@
-var Builder = require('systemjs-builder');
+var precinct = require('precinct');
 
-var path = require('path');
+var make_dependency_paths_absolute = require('./common/make_dependency_paths_absolute');
 
-module.exports = function(html_path, main, callback){
+module.exports = function(html_dir, path, callback){
 
-    var systemBuilder = new Builder();
+    var dependencies = precinct.paperwork(path);
 
-    //systemBuilder.loader.baseURL = html_path;
-    //systemBuilder.loadConfigSync('src/config.js');
+    dependencies = make_dependency_paths_absolute(html_dir, path, dependencies);
 
-    var main_normalized;
+    callback(dependencies);
 
-    var keys_normalized = {};
-
-    return (
-        System
-            .normalize(main)
-            .then(function(value){
-                main_normalized = value; })
-            .then(function(){
-                return systemBuilder.trace(main); })
-            .then(function(tree){
-
-                return Promise
-                    .all(
-                        Object.keys(tree)
-                            .map(function(key){
-                                return System.normalize(key)
-                                    .then(function(key_normlized){
-                                        keys_normalized[key_normlized] = key;
-                                    });
-                            })
-                    )
-                    .then(function(){
-                        return tree;
-                    });
-            })
-            .then(function(tree){
-
-                var ret = {};
-
-                var key = keys_normalized[main_normalized];
-                /*
-                var key =
-                    path.relative(
-                        path.normalize(systemBuilder.loader.baseURL).replace(/^[^:]*:/,''),
-                        main);
-                */
-              //console.log(key, Object.keys(tree));
-                ret[main] = tree[key].deps;
-
-                //callback(ret);
-
-                callback(tree[key].deps);
-
-            })
-    );
-}
-
+};

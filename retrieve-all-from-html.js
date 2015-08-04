@@ -33,14 +33,17 @@ module.exports = function(html_path, callback){
                     .map(function(path){
                         return new Promise(function(resolve){
 
-                            retrieve_dependencies(html_path, path, function(path_dependencies){
-                                dependencies[path] = path_dependencies;
-                                (dependencies[path] || []).forEach(function(dependency_path){
-                                    // make `dependencies.hasOwnProperty(dependency_path) === true;`
-                                    dependencies[dependency_path] = dependencies[dependency_path];
+                            retrieve_dependencies(
+                                require('path').dirname(html_path) + '/',
+                                path,
+                                function(path_dependencies){
+                                    dependencies[path] = path_dependencies;
+                                    (dependencies[path] || []).forEach(function(dependency_path){
+                                        // make `dependencies.hasOwnProperty(dependency_path) === true;`
+                                        dependencies[dependency_path] = dependencies[dependency_path];
+                                    });
+                                    resolve();
                                 });
-                                resolve();
-                            });
 
                         });
                     }))
