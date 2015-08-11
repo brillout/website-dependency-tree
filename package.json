@@ -1,9 +1,9 @@
 {
   "name": "node-dependency-tree",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
-    "node-dependency-tree": "index.js"
+    "node-dependency-tree": "lib/index.js"
   },
   "dependencies": {
     "archy": "^1.0.0",
