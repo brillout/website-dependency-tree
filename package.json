@@ -6,7 +6,10 @@
     "node-dependency-tree": "lib/index.js"
   },
   "dependencies": {
+    "acorn": "^2.2.0",
     "archy": "^1.0.0",
+    "better-assert": "^1.0.2",
+    "bluebird": "^2.9.34",
     "jsdom": "^5.6.1",
     "precinct": "^2.5.1"
   },
