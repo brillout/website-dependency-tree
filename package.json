@@ -1,9 +1,9 @@
 {
   "name": "dependency-tree-retriever",
   "version": "0.1.1",
-  "main": "lib/index.js",
+  "main": "lib/api.js",
   "bin": {
-    "dependency-tree-retriever": "lib/index.js"
+    "dependency-tree-retriever": "lib/cli.js"
   },
   "dependencies": {
     "acorn": "^2.2.0",
