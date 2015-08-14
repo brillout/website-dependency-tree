@@ -1,24 +1,10 @@
 {
-  "name": "node-dependency-tree",
-  "version": "1.0.0",
+  "name": "dependency-tree-retriever",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "bin": {
-    "node-dependency-tree": "lib/index.js"
+    "dependency-tree-retriever": "lib/index.js"
   },
   "dependencies": {
-    "acorn": "^2.2.0",
-    "archy": "^1.0.0",
-    "better-assert": "^1.0.2",
-    "bluebird": "^2.9.34",
-    "jsdom": "^5.6.1",
-    "jspm": "^0.16.0-beta.7",
-    "precinct": "^2.5.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
