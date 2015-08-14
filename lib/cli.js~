@@ -24,7 +24,7 @@ dependency_tree_retriever.pipeline_workers.unshift(function(code, done){
     done();
 });
 dependency_tree_retriever.pipeline_workers.splice(6, 0, function(code, done){
-    console.log(chalk.green.bold('ok'),
+    console.log(chalk.green.bold('ok'),'\n',
     tree_to_text(code.id,(code.dependencies||[]).map(function(code){return code.id}))
     );
     done();
