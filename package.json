@@ -1,9 +1,9 @@
 {
-  "name": "retrieve-dependency-tree",
+  "name": "website-dependency-tree",
   "version": "0.1.1",
   "main": "lib/api.js",
   "bin": {
-    "retrieve-dependency-tree": "lib/cli.js"
+    "website-dependency-tree": "lib/cli.js"
   },
   "dependencies": {
     "acorn": "^2.2.0",
