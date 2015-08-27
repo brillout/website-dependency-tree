@@ -1,6 +1,6 @@
 {
   "name": "website-dependency-tree",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "main": "lib/api.js",
   "bin": {
     "website-dependency-tree": "lib/cli.js"
