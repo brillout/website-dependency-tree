@@ -18,5 +18,19 @@
     "liftoff": "^2.1.0",
     "precinct": "^2.5.1",
     "sync-request": "^2.0.1"
-  }
+  },
+  "keywords": [
+    "dependency",
+    "tree",
+    "module",
+    "requirejs",
+    "AMD",
+    "commonjs",
+    "es6",
+    "es2015",
+    "jspm",
+    "systemjs",
+    "sass"
+  ],
+  "repository": "github:brillout/website-dependency-tree"
 }
