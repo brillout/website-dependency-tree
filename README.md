@@ -1,8 +1,19 @@
 ### CLI Usage
-
 ```shell
 npm install -g website-dependency-tree
+```
+the command
+```shell
 website-dependency-tree http://brillout.github.io/website-dependency-tree--demo/simple_demo/
+```
+will print
+```
+ok    http://brillout.github.io/website-dependency-tree--demo/simple_demo/
+      ├─┬ /hello.css
+      │ └── /duck.gif
+      ├── /jquery.min.js
+      └── /hello.js
+      
 ```
 
 A more complete demonstration is available [here](https://github.com/brillout/website-dependency-tree--demo)
