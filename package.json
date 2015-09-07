@@ -14,6 +14,7 @@
     "jsdom": "^6.1.0",
     "jspm": "^0.16.0-beta.7",
     "liftoff": "^2.1.0",
+    "object-assign": "^4.0.1",
     "precinct": "^2.5.1",
     "sync-request": "^2.0.1"
   },
