@@ -37,10 +37,10 @@ website_dependency_tree
 .retrieve('path/to/index.html')
 .then(function(code){
   // direct dependencies defined in index.html
-  console.log(code.dependencies);
+  console.log(code.dependees);
   // all transitive dependencies of index.html,
   // i.e. dependencies defined in index.html, and dependencies of the dependencies, etc.
-  console.log(code.dependencies_all);
+  console.log(code.dependees_all);
 });
 ```
 
