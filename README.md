@@ -1,22 +1,27 @@
 ### CLI Usage
+
 ```shell
 npm install -g website-dependency-tree
 ```
+
 the command
+
 ```shell
 website-dependency-tree http://brillout.github.io/demo-website/simple_demo/
 ```
+
 will print
+
 ```
 ok    http://brillout.github.io/demo-website/simple_demo/
       ├─┬ /hello.css
       │ └── /duck.gif
       ├── /jquery.min.js
       └── /hello.js
-      
 ```
 
 A more complete demonstration is available [here](https://github.com/brillout/demo-website)
+
 
 ### About
 
@@ -27,6 +32,7 @@ retrieves dependencies defined in
  - AMD/Require.JS
 
 The dependencies are retrieved statically, i.e. the code is parsed and not executed.
+
 
 ### API Usage
 
@@ -43,6 +49,7 @@ website_dependency_tree
   console.log(code.dependees_all);
 });
 ```
+
 
 ### Potential Use Cases
 
