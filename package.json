@@ -1,6 +1,6 @@
 {
   "name": "website-dependency-tree",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "lib/api.js",
   "bin": "lib/cli.js",
   "dependencies": {
@@ -33,5 +33,5 @@
     "systemjs",
     "sass"
   ],
-  "repository": "github:brillout/website-dependency-tree"
+  "repository": "github:autobuild-js/website-dependency-tree"
 }
