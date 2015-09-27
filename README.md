@@ -44,7 +44,7 @@ website_dependency_tree
 });
 ```
 
-### Potential Usage
+### Potential Use Cases
 
  - HTTP2 server push dependencies
  - Client-Side prefetching
