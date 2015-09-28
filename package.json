@@ -1,7 +1,7 @@
 {
   "name": "website-dependency-tree",
   "description": "Retrieve the Dependency Tree of a Website",
-  "version": "0.1.5",
+  "version": "0.2.1",
   "main": "lib/api.js",
   "bin": "lib/cli.js",
   "dependencies": {
